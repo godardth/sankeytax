@@ -20,6 +20,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8af9db50-a799-4473-bd09-8250fd13881a"
+      }
+    },
+    "owner": "godardth"
   }
 }

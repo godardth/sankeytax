@@ -1,0 +1,110 @@
+{
+  "id": "fr",
+  "name": "France",
+  "flag": "🇫🇷",
+  "currency": "EUR",
+  "version": "0.2.0",
+  "status": "illustrative",
+  "reviewedAt": "2026-10-29",
+  "salary": 33266,
+  "salaryNote": "2024 net median €2,190/month; annual gross starting value estimated using a 21% contribution assumption.",
+  "sources": [
+    {
+      "label": "Wage statistics",
+      "url": "https://www.insee.fr/fr/statistiques/8657156"
+    },
+    {
+      "label": "OECD labour-tax context (not an exact calibration)",
+      "url": "https://www.oecd.org/en/publications/taxing-wages-2026_3a5169ef-en.html"
+    },
+    {
+      "label": "Rental taxation · French tax authority",
+      "url": "https://www.impots.gouv.fr/particulier/location-vide-de-meubles"
+    }
+  ],
+  "employer": [
+    {
+      "label": "Health & family",
+      "rate": 0.12
+    },
+    {
+      "label": "Pension",
+      "rate": 0.16
+    },
+    {
+      "label": "Unemployment & other",
+      "rate": 0.08
+    }
+  ],
+  "employee": [
+    {
+      "label": "Employee social contributions",
+      "rate": 0.21
+    },
+    {
+      "label": "Income tax · effective estimate",
+      "rate": 0.075
+    }
+  ],
+  "vat": 0.2,
+  "propertyTaxRate": 0.003,
+  "budget": [
+    {
+      "id": "housing",
+      "label": "Housing",
+      "share": 0.32,
+      "vat": 0,
+      "supplierLaborShare": 0.0,
+      "supplierTaxWedge": 0
+    },
+    {
+      "id": "food",
+      "label": "Food & groceries",
+      "share": 0.16,
+      "vat": 0.055,
+      "supplierLaborShare": 0.12,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "share": 0.1,
+      "vat": 0.2,
+      "supplierLaborShare": 0.15,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "utilities",
+      "label": "Utilities",
+      "share": 0.07,
+      "vat": 0.2,
+      "supplierLaborShare": 0.15,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "services",
+      "label": "Services & leisure",
+      "share": 0.14,
+      "vat": 0.2,
+      "supplierLaborShare": 0.6,
+      "supplierTaxWedge": 0.4
+    },
+    {
+      "id": "other",
+      "label": "Other purchases",
+      "share": 0.11,
+      "vat": 0.2,
+      "supplierLaborShare": 0.2,
+      "supplierTaxWedge": 0.3
+    }
+  ],
+  "rentalTax": {
+    "status": "illustrative",
+    "annualPropertyTax": 1000,
+    "otherExpenseShare": 0.2,
+    "incomeTaxRate": 0.3,
+    "socialTaxRate": 0.172,
+    "allowanceRate": 0.3,
+    "method": "expenses"
+  }
+}

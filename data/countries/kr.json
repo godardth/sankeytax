@@ -1,0 +1,106 @@
+{
+  "id": "kr",
+  "name": "South Korea",
+  "flag": "🇰🇷",
+  "currency": "KRW",
+  "version": "0.2.0",
+  "status": "illustrative",
+  "reviewedAt": "2026-10-29",
+  "salary": 34560000,
+  "salaryNote": "2024 median wage income ₩2.88 million/month × 12.",
+  "sources": [
+    {
+      "label": "Wage statistics",
+      "url": "https://mods.go.kr/boardDownload.es?bid=11786&list_no=444598&seq=2"
+    },
+    {
+      "label": "OECD labour-tax context (not an exact calibration)",
+      "url": "https://www.oecd.org/en/publications/taxing-wages-2026_3a5169ef-en.html"
+    }
+  ],
+  "employer": [
+    {
+      "label": "National pension",
+      "rate": 0.045
+    },
+    {
+      "label": "Health & care",
+      "rate": 0.04
+    },
+    {
+      "label": "Employment & other",
+      "rate": 0.02
+    }
+  ],
+  "employee": [
+    {
+      "label": "Employee social contributions",
+      "rate": 0.094
+    },
+    {
+      "label": "Income tax · effective estimate",
+      "rate": 0.045
+    }
+  ],
+  "vat": 0.1,
+  "propertyTaxRate": 0.003,
+  "budget": [
+    {
+      "id": "housing",
+      "label": "Housing",
+      "share": 0.32,
+      "vat": 0,
+      "supplierLaborShare": 0.0,
+      "supplierTaxWedge": 0
+    },
+    {
+      "id": "food",
+      "label": "Food & groceries",
+      "share": 0.16,
+      "vat": 0,
+      "supplierLaborShare": 0.12,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "share": 0.1,
+      "vat": 0.1,
+      "supplierLaborShare": 0.15,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "utilities",
+      "label": "Utilities",
+      "share": 0.07,
+      "vat": 0.1,
+      "supplierLaborShare": 0.15,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "services",
+      "label": "Services & leisure",
+      "share": 0.14,
+      "vat": 0.1,
+      "supplierLaborShare": 0.6,
+      "supplierTaxWedge": 0.4
+    },
+    {
+      "id": "other",
+      "label": "Other purchases",
+      "share": 0.11,
+      "vat": 0.1,
+      "supplierLaborShare": 0.2,
+      "supplierTaxWedge": 0.3
+    }
+  ],
+  "rentalTax": {
+    "status": "unconfigured",
+    "annualPropertyTax": 0,
+    "otherExpenseShare": 0,
+    "incomeTaxRate": 0,
+    "socialTaxRate": 0,
+    "allowanceRate": 0,
+    "method": "expenses"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": "us",
+  "name": "United States",
+  "flag": "🇺🇸",
+  "currency": "USD",
+  "version": "0.2.0",
+  "status": "illustrative",
+  "reviewedAt": "2026-10-29",
+  "salary": 62608,
+  "salaryNote": "2025 median weekly full-time earnings $1,204 × 52. Sales tax is an illustrative combined local rate, not a national VAT.",
+  "sources": [
+    {
+      "label": "Wage statistics",
+      "url": "https://www.bls.gov/news.release/wkyeng.t07.htm"
+    },
+    {
+      "label": "OECD labour-tax context (not an exact calibration)",
+      "url": "https://www.oecd.org/en/publications/taxing-wages-2026_3a5169ef-en.html"
+    }
+  ],
+  "employer": [
+    {
+      "label": "Social Security",
+      "rate": 0.062
+    },
+    {
+      "label": "Medicare",
+      "rate": 0.0145
+    },
+    {
+      "label": "Other payroll",
+      "rate": 0.0045
+    }
+  ],
+  "employee": [
+    {
+      "label": "Employee social contributions",
+      "rate": 0.077
+    },
+    {
+      "label": "Income tax · effective estimate",
+      "rate": 0.14
+    }
+  ],
+  "vat": 0.07,
+  "propertyTaxRate": 0.008,
+  "budget": [
+    {
+      "id": "housing",
+      "label": "Housing",
+      "share": 0.32,
+      "vat": 0,
+      "supplierLaborShare": 0.0,
+      "supplierTaxWedge": 0
+    },
+    {
+      "id": "food",
+      "label": "Food & groceries",
+      "share": 0.16,
+      "vat": 0,
+      "supplierLaborShare": 0.12,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "share": 0.1,
+      "vat": 0.07,
+      "supplierLaborShare": 0.15,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "utilities",
+      "label": "Utilities",
+      "share": 0.07,
+      "vat": 0.07,
+      "supplierLaborShare": 0.15,
+      "supplierTaxWedge": 0.3
+    },
+    {
+      "id": "services",
+      "label": "Services & leisure",
+      "share": 0.14,
+      "vat": 0.07,
+      "supplierLaborShare": 0.6,
+      "supplierTaxWedge": 0.4
+    },
+    {
+      "id": "other",
+      "label": "Other purchases",
+      "share": 0.11,
+      "vat": 0.07,
+      "supplierLaborShare": 0.2,
+      "supplierTaxWedge": 0.3
+    }
+  ],
+  "rentalTax": {
+    "status": "unconfigured",
+    "annualPropertyTax": 0,
+    "otherExpenseShare": 0,
+    "incomeTaxRate": 0,
+    "socialTaxRate": 0,
+    "allowanceRate": 0,
+    "method": "expenses"
+  }
+}
