@@ -3,7 +3,7 @@
   "name": "France",
   "flag": "🇫🇷",
   "currency": "EUR",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "illustrative",
   "reviewedAt": "2026-10-29",
   "salary": 33266,
@@ -106,5 +106,22 @@
     "socialTaxRate": 0.172,
     "allowanceRate": 0.3,
     "method": "expenses"
+  },
+  "publicFinance": {
+    "year": 2023,
+    "retrievedAt": "2026-10-30",
+    "scope": "General government (S13), national accounts, current local currency, millions",
+    "dataset": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE12(1.1)",
+    "sourceUrl": "https://data-explorer.oecd.org/vis?df[ag]=OECD.SDD.NAD&df[id]=DSD_NASEC10@DF_TABLE12&df[vs]=1.1",
+    "cashComparable": true,
+    "transactions": {
+      "expenditure": 1608270.8,
+      "revenue": 1456350.5,
+      "cashBenefits": 530907.6,
+      "purchasedSocialServices": 178135.4,
+      "employeeCompensation": 346343.0,
+      "goodsAndServices": 157548.0,
+      "interest": 53409.9
+    }
   }
 }

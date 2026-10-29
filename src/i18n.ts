@@ -1,6 +1,17 @@
 // English source strings are stable translation keys. Country data remains language-neutral.
 export type Language = 'en' | 'fr';
 export const french: Record<string,string> = {
+ "Employee contributions": "Cotisations salariales",
+ "Income tax": "Impôt sur le revenu",
+ "Public services": "Services publics",
+ "Benefits in kind": "Prestations en nature",
+ "Investment & other": "Investissements et autres",
+ "Social benefits (US)": "Prestations sociales (USA)",
+  "07  FINAL OUTCOMES": "07  BILAN FINAL",
+  "Value consumed": "Valeur consommée",
+  "Value redistributed": "Valeur redistribuée",
+  "Government expenses": "Dépenses publiques",
+  "Redistributed value includes recorded social benefits in cash and purchased benefits in kind. Government expenses include services, investment and interest, not just administration. Savings are retained wealth in the final column; they are not consumption.": "La valeur redistribuée comprend les prestations sociales enregistrées en espèces et les prestations en nature achetées. Les dépenses publiques incluent les services, les investissements et les intérêts, pas seulement l’administration. L’épargne figure comme patrimoine conservé dans la dernière colonne ; elle n’est pas consommée.",
   "Rental taxes are configured only for the illustrative French scenario. Other country defaults omit unknown landlord taxes, so these comparisons are incomplete.": "La fiscalité locative est configurée uniquement pour le scénario français indicatif. Les autres pays omettent par défaut les impôts inconnus du bailleur : ces comparaisons sont donc incomplètes.",
   "FOLLOW THE MONEY": "SUIVEZ L’ARGENT",
   "YOUR SIMULATION": "VOTRE SIMULATION",
@@ -120,7 +131,32 @@ export const french: Record<string,string> = {
   "Already included in the housing → government flow and final KPI. This is an attribution of rent-funded taxes, not proof that taxes raise rent by this amount. Non-tax rent remains a housing-consumption residual, not landlord profit.": "Déjà inclus dans le flux logement → administrations publiques et dans le ratio final. Il s’agit d’une attribution des impôts financés par le loyer, sans démontrer qu’ils augmentent le loyer d’autant. Le reste constitue un résidu de consommation de logement, pas le bénéfice du bailleur.",
   "Estimated taxes exceeded rent; attribution is capped at the rent paid.": "Les impôts estimés dépassaient le loyer ; leur attribution est plafonnée au loyer payé.",
   "Rental taxation · French tax authority": "Fiscalité locative · administration fiscale française",
-  "Tax-inclusive VAT = price × rate ÷ (1 + rate). Supplier tax = price excluding VAT × labor-cost share × supplier tax wedge. This is a single pass, not a recursive estimate of every tax embedded in a supply chain. Rent includes an optional landlord-tax scenario. Taxable rental income is rent minus property tax and other deductible expenses, or rent minus a flat allowance. Property tax is counted once as government revenue. Tax attribution is capped at rent; losses, credits, other properties and eligibility rules are excluded. Ownership assumes no mortgage and models only property tax; home equity is not consumption.": "TVA incluse = prix × taux ÷ (1 + taux). Fiscalité du fournisseur = prix hors TVA × part du coût du travail × coin fiscal du fournisseur. Le calcul ne comporte qu’un passage, sans récursion dans la chaîne de production. Le loyer inclut un scénario fiscal facultatif pour le bailleur. Le revenu locatif imposable correspond au loyer diminué de la taxe foncière et des autres charges déductibles, ou d’un abattement forfaitaire. La taxe foncière est comptée une seule fois dans les recettes publiques. L’attribution est plafonnée au loyer ; déficits, crédits, autres biens et règles d’éligibilité sont exclus. La propriété suppose l’absence d’emprunt et ne modélise que la taxe foncière ; le patrimoine immobilier n’est pas de la consommation."
+  "Tax-inclusive VAT = price × rate ÷ (1 + rate). Supplier tax = price excluding VAT × labor-cost share × supplier tax wedge. This is a single pass, not a recursive estimate of every tax embedded in a supply chain. Rent includes an optional landlord-tax scenario. Taxable rental income is rent minus property tax and other deductible expenses, or rent minus a flat allowance. Property tax is counted once as government revenue. Tax attribution is capped at rent; losses, credits, other properties and eligibility rules are excluded. Ownership assumes no mortgage and models only property tax; home equity is not consumption.": "TVA incluse = prix × taux ÷ (1 + taux). Fiscalité du fournisseur = prix hors TVA × part du coût du travail × coin fiscal du fournisseur. Le calcul ne comporte qu’un passage, sans récursion dans la chaîne de production. Le loyer inclut un scénario fiscal facultatif pour le bailleur. Le revenu locatif imposable correspond au loyer diminué de la taxe foncière et des autres charges déductibles, ou d’un abattement forfaitaire. La taxe foncière est comptée une seule fois dans les recettes publiques. L’attribution est plafonnée au loyer ; déficits, crédits, autres biens et règles d’éligibilité sont exclus. La propriété suppose l’absence d’emprunt et ne modélise que la taxe foncière ; le patrimoine immobilier n’est pas de la consommation.",
+  "06  PUBLIC USE": "06  USAGES PUBLICS",
+  "Cash social benefits": "Prestations sociales en espèces",
+  "Social benefits · US reporting": "Prestations · données américaines",
+  "Purchased social services": "Prestations en nature achetées",
+  "Public-service running costs": "Fonctionnement des services publics",
+  "Debt interest": "Intérêts de la dette",
+  "Investment & other spending": "Investissements et autres dépenses",
+  "Hide public spending": "Masquer les dépenses publiques",
+  "Show public spending": "Afficher les dépenses publiques",
+  "Private consumption only · public benefits excluded": "Consommation privée · prestations publiques exclues",
+  "Taxes are transferred, not erased.": "Les impôts financent aussi des prestations et des services.",
+  "Public money pays benefits, services and investment. The private-consumption ratio above is not a measure of everything society receives, nor a measure of government waste.": "L’argent public finance des prestations, des services et des investissements. Le ratio de consommation privée ci-dessus ne mesure ni l’ensemble de ce que reçoit la société ni le gaspillage public.",
+  "Government receipts in this simulation": "Recettes publiques de cette simulation",
+  "Spending mix": "Répartition des dépenses",
+  "Cash benefits include pensions and income support. Running costs cover all public staff and purchases, including frontline services, not just administration. Purchased social services cover market-provided benefits in kind; public hospitals and schools also appear in running costs. The residual includes investment, subsidies and other transfers.": "Les prestations en espèces comprennent les retraites et les aides au revenu. Le fonctionnement couvre tous les agents et achats publics, y compris les services de terrain, pas seulement l’administration. Les prestations en nature achetées sont fournies par des producteurs marchands ; les hôpitaux et écoles publics figurent aussi dans le fonctionnement. Le solde comprend investissements, subventions et autres transferts.",
+  "US reporting includes healthcare payments within D62 social benefits. This is not a cash-only estimate. D632 is reported as zero; that does not mean no healthcare or benefits in kind are provided.": "Les données américaines incluent des paiements de santé dans les prestations D62. Ce montant ne correspond donc pas uniquement à de l’argent versé aux ménages. D632 est déclaré nul ; cela ne signifie pas l’absence de soins ou de prestations en nature.",
+  "And the deficit? A source of financing.": "Et le déficit ? Une source de financement.",
+  "For every 100 of national public spending": "Pour 100 de dépenses publiques nationales",
+  "from public revenue": "de recettes publiques",
+  "from net borrowing": "d’emprunt net",
+  "Revenue surplus": "Excédent de recettes",
+  "The deficit is spending above revenue, not a destination for your taxes. Interest is already a spending category. Public revenue also includes non-tax income. These national financing shares are context, not additional money taken from your salary.": "Le déficit correspond aux dépenses dépassant les recettes, et non à une destination de vos impôts. Les intérêts figurent déjà dans les dépenses. Les recettes publiques comprennent aussi des revenus non fiscaux. Ces parts nationales de financement donnent du contexte ; elles ne sont pas prélevées en plus sur votre salaire.",
+  "Allocation uses each category’s share of total national spending, applied proportionally to modeled government receipts. It does not trace earmarked taxes or calculate benefits received by your household. Nothing is added to your bank account or counted twice in the KPI.": "La ventilation applique la part de chaque catégorie dans les dépenses nationales aux recettes publiques modélisées. Elle ne suit pas les impôts affectés et ne calcule pas les prestations reçues par votre foyer. Aucun montant n’est ajouté à votre compte bancaire ni compté deux fois dans le ratio.",
+  "Source: OECD national accounts": "Source : comptes nationaux OCDE",
+  "General government · common 2023 reference year · retrieved 30 October 2026. Historical snapshot, not a claim of latest data. Amounts show spending composition, not the value or effectiveness of services.": "Ensemble des administrations publiques · année commune 2023 · données consultées le 30 octobre 2026. Instantané historique, sans prétendre être les données les plus récentes. Les montants décrivent la composition des dépenses, pas la valeur ni l’efficacité des services."
 };
 export function translate(language:Language,text:string):string {return language==='fr' ? french[text] ?? text : text;}
 export function percent(value:number,language:Language):string {return new Intl.NumberFormat(language==='fr'?'fr-FR':'en-US',{style:'percent',minimumFractionDigits:1,maximumFractionDigits:1}).format(value);}

@@ -3,7 +3,7 @@
   "name": "Germany",
   "flag": "🇩🇪",
   "currency": "EUR",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "illustrative",
   "reviewedAt": "2026-10-29",
   "salary": 48156,
@@ -102,5 +102,22 @@
     "socialTaxRate": 0,
     "allowanceRate": 0,
     "method": "expenses"
+  },
+  "publicFinance": {
+    "year": 2023,
+    "retrievedAt": "2026-10-30",
+    "scope": "General government (S13), national accounts, current local currency, millions",
+    "dataset": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE12(1.1)",
+    "sourceUrl": "https://data-explorer.oecd.org/vis?df[ag]=OECD.SDD.NAD&df[id]=DSD_NASEC10@DF_TABLE12&df[vs]=1.1",
+    "cashComparable": true,
+    "transactions": {
+      "expenditure": 2029893.0,
+      "revenue": 1934907.0,
+      "cashBenefits": 661901.0,
+      "purchasedSocialServices": 356897.0,
+      "employeeCompensation": 340944.0,
+      "goodsAndServices": 267658.0,
+      "interest": 37138.0
+    }
   }
 }

@@ -3,7 +3,7 @@
   "name": "South Korea",
   "flag": "🇰🇷",
   "currency": "KRW",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "illustrative",
   "reviewedAt": "2026-10-29",
   "salary": 34560000,
@@ -102,5 +102,22 @@
     "socialTaxRate": 0,
     "allowanceRate": 0,
     "method": "expenses"
+  },
+  "publicFinance": {
+    "year": 2023,
+    "retrievedAt": "2026-10-30",
+    "scope": "General government (S13), national accounts, current local currency, millions",
+    "dataset": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE12(1.1)",
+    "sourceUrl": "https://data-explorer.oecd.org/vis?df[ag]=OECD.SDD.NAD&df[id]=DSD_NASEC10@DF_TABLE12&df[vs]=1.1",
+    "cashComparable": true,
+    "transactions": {
+      "expenditure": 857483200.0,
+      "revenue": 836657400.0,
+      "cashBenefits": 162304100.0,
+      "purchasedSocialServices": 137624500.0,
+      "employeeCompensation": 159157400.0,
+      "goodsAndServices": 93395100.0,
+      "interest": 30303600.0
+    }
   }
 }

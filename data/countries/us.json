@@ -3,7 +3,7 @@
   "name": "United States",
   "flag": "🇺🇸",
   "currency": "USD",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "illustrative",
   "reviewedAt": "2026-10-29",
   "salary": 62608,
@@ -102,5 +102,22 @@
     "socialTaxRate": 0,
     "allowanceRate": 0,
     "method": "expenses"
+  },
+  "publicFinance": {
+    "year": 2023,
+    "retrievedAt": "2026-10-30",
+    "scope": "General government (S13), national accounts, current local currency, millions",
+    "dataset": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE12(1.1)",
+    "sourceUrl": "https://data-explorer.oecd.org/vis?df[ag]=OECD.SDD.NAD&df[id]=DSD_NASEC10@DF_TABLE12&df[vs]=1.1",
+    "cashComparable": false,
+    "transactions": {
+      "expenditure": 10905857.712,
+      "revenue": 8694077.898,
+      "cashBenefits": 4182525.164,
+      "purchasedSocialServices": 0.0,
+      "employeeCompensation": 2313103.325,
+      "goodsAndServices": 1878643.78,
+      "interest": 1205507.31
+    }
   }
 }

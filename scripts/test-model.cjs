@@ -35,3 +35,30 @@ const taxed=simulate(fr,rental),untaxed=simulate(fr,{...rental,rentalEnabled:fal
 assert(Math.abs(taxed.government-untaxed.government-expense.landlordTax)<1e-6);
 assert(Math.abs(untaxed.consumed-taxed.consumed-expense.landlordTax)<1e-6);
 console.log('Rental actual-expense, allowance, disabled, owner, zero-rent, overspending and capped-tax scenarios passed.');
+const publicCode=ts.transpileModule(fs.readFileSync('src/utils/public-finance.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
+const publicModule={exports:{}};new Function('exports',publicCode)(publicModule.exports);
+const {publicAllocation,financing}=publicModule.exports;
+for(const c of countries){
+ const f=c.publicFinance.transactions;
+ for(const v of Object.values(f))assert(Number.isFinite(v)&&v>=0);
+ assert(f.expenditure>0);assert.equal(c.publicFinance.year,2023);
+ for(const receipts of [0,100,simulate(c,defaults(c)).government]){
+  const groups=publicAllocation(c,receipts);assert(groups.every(g=>g.value>=0&&g.share>=0));
+  assert(Math.abs(groups.reduce((n,g)=>n+g.share,0)-1)<1e-9);
+  assert(Math.abs(groups.reduce((n,g)=>n+g.value,0)-receipts)<1e-6);
+  assert.equal(groups.find(g=>g.id==='operations').amount,f.employeeCompensation+f.goodsAndServices);
+ }
+ const v=financing(c);assert(Math.abs(v.revenueShare+v.deficitShare-v.surplusShare-1)<1e-9);
+}
+assert.equal(countries.find(c=>c.id==='us').publicFinance.cashComparable,false);
+assert.equal(publicAllocation(countries.find(c=>c.id==='us'),100)[0].label,'Social benefits · US reporting');
+const surplus={...fr,publicFinance:{...fr.publicFinance,transactions:{...fr.publicFinance.transactions,revenue:200,expenditure:100}}};
+assert.equal(financing(surplus).deficitShare,0);assert.equal(financing(surplus).surplusShare,1);
+console.log('Public-spending shares conserve receipts for every country; deficit and surplus financing reconcile.');
+for(const c of countries){
+ const sim=simulate(c,defaults(c));const final=publicModule.exports.finalOutcomes(c,sim.government,sim.consumed);
+ assert.deepEqual(final.map(x=>x.label),['Value consumed','Value redistributed','Government expenses']);
+ assert(Math.abs(final.reduce((s,x)=>s+x.value,0)+sim.savings-sim.cost)<1e-6);
+ assert(Math.abs(final[1].value-sim.government*(c.publicFinance.transactions.cashBenefits+c.publicFinance.transactions.purchasedSocialServices)/c.publicFinance.transactions.expenditure)<1e-6);
+}
+console.log('Final outcomes plus retained savings reconcile to employer cost for all four countries.');
